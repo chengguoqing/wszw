@@ -48,7 +48,7 @@ export default {
 
 
         Vue.prototype.hf = function (url, cu) { //路由跳转
-            router.replace({
+            router.push({
                 path: "/" + url,
                 query: cu
             })
