@@ -15,7 +15,10 @@ body {
     margin: auto;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
-
+.wr{
+     font-family:'Microsoft YaHei';
+    
+}
 .st {
     font-family: SimSun
 }
@@ -313,7 +316,7 @@ html {
 }
 
 .red {
-    color: #F44336!important
+    color: #FF4638!important
 }
 
 .wc {
@@ -880,7 +883,7 @@ textarea {
 }
 
 .ye {
-    color: #ffda91 !important
+    color: #FD7C26 !important
 }
 
 .cz {
