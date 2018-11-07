@@ -35,7 +35,7 @@ export default {
 
         Vue.prototype.time_d = function (t) {
             let time = new Date()
-            time.setTime(t * 1000)
+            time.setTime(t)
             let Year = time.getFullYear(),
                 Month = time.getMonth() + 1,
                 Data = time.getDate() < 10 ? 0 + '' + time.getDate() : time.getDate(),
@@ -106,6 +106,10 @@ export default {
                     }
                 });
             })
+        }
+        
+        Vue.prototype.Title = function (title, ty) {
+              document.title = title
         }
 
         Vue.prototype.wx_config = function (data) {

@@ -12,7 +12,7 @@
             <section class="sd_kh_der">
                 <p class="cf fz18 ">战绩</p>
                 <p class="fz12 cf mt2">2018.11.01</p>
-                <p class="mt15">
+                <p class="mt10">
                     <span class="xianq_ddr">详情</span>
                 </p>
             </section>
@@ -21,7 +21,7 @@
             <section class="sd_kh_der ab">
                 <p class="cf fz18 ">战绩</p>
                 <p class="fz12 cf mt2">2018.11.01</p>
-                <p class="mt15">
+                <p class="mt10">
                     <span class="xianq_ddr">详情</span>
                 </p>
             </section>
@@ -30,7 +30,7 @@
             <section class="sd_kh_der ac">
                 <p class="cf fz18 ">战绩</p>
                 <p class="fz12 cf mt2">2018.11.01</p>
-                <p class="mt15">
+                <p class="mt10">
                     <span class="xianq_ddr">详情</span>
                 </p>
             </section>

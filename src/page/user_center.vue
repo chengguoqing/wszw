@@ -50,7 +50,7 @@
                         <span class="cz ml10 fz16">订阅大神</span>
                     </van-cell>
                     
-                       <van-cell is-link>
+                       <van-cell is-link @click="hf('shangliao')">
                         <img src="../assets/img/compile.png" class="sd_dertx cz">
                         <span class="cz ml10 fz16">用户上料</span>
                     </van-cell>
@@ -58,7 +58,7 @@
               
         </section>
 </section>
-        <section class="mt70 cen pr">
+        <section class="mt40 cen pr">
             <section class="bgff  dsf_deertx fz14">
                 <img src="../assets/img/user_agreement.png" class="user_agreement cz">
                 <span class="cz ml5">用户使用协议</span>
