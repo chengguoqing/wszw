@@ -7,6 +7,8 @@ import public_c from './public_c.js'
 import 'vant/lib/index.css';
 import './assets/css/base.css'
 import './assets/css/style.css'
+import VueWechatTitle from 'vue-wechat-title';  
+Vue.use(VueWechatTitle)
 Vue.config.productionTip = false
 Vue.use(Vant);
 Vue.use(public_c);

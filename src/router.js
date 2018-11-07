@@ -5,11 +5,14 @@ import index from './page/index.vue'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'index',
-      component: index
+    routes: [
+        {
+            path: '/',
+            name: 'index',
+            component: index,
+            meta: {
+                title: '标题'
+            }
     }
   ]
 })
