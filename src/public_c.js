@@ -1,9 +1,16 @@
 var url_d = "https://api.cangniaowl.com/v1/"
+import Mock from 'mockjs';
 import router from './router'
 var wx = require('weixin-js-sdk');
 import axios from "axios"
 export default {
     install(Vue) {
+        Vue.prototype.test_der = Mock.mock(url_d + 'msg_e', function (options) {
+            return Mock.mock({
+                email: '@EMAIL'
+            })
+        });
+
         Vue.prototype.post = function (url, dtat, call) {
             axios({
                 method: 'post',
@@ -42,7 +49,7 @@ export default {
                 hour = time.getHours() < 10 ? 0 + '' + time.getHours() : time.getHours(),
                 Minutes = time.getMinutes() < 10 ? 0 + '' + time.getMinutes() : time.getMinutes(),
                 Seconds = time.getSeconds() < 10 ? 0 + '' + time.getSeconds() : time.getSeconds()
-            Month < 10 ? Month = 0 + '' + Month  : ''
+            Month < 10 ? Month = 0 + '' + Month : ''
             return Year + "-" + Month + "-" + Data + " " + hour + ":" + Minutes + ":" + Seconds
         }
 
@@ -107,9 +114,9 @@ export default {
                 });
             })
         }
-        
+
         Vue.prototype.Title = function (title, ty) {
-              document.title = title
+            document.title = title
         }
 
         Vue.prototype.wx_config = function (data) {

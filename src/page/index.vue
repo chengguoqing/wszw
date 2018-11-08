@@ -18,7 +18,14 @@ dsfdsfd
 
         },
         mounted() {
+            this.test_der
 
+            this.post("msg_e", {
+                name: "程国庆",
+                age: 26
+            }, function(data) {
+                console.log(data);
+            })
         },
     }
 
