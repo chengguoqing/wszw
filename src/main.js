@@ -6,6 +6,7 @@ import Vant from 'vant';
 import public_c from './public_c.js'
 import 'vant/lib/index.css';
 import './assets/css/base.css'
+import './assets/css/iconfont.css'
 import './assets/css/style.css'
 import VueWechatTitle from 'vue-wechat-title';  
 Vue.use(VueWechatTitle)

@@ -1,7 +1,7 @@
 <template>
 <div >
-发光飞碟个
-dsfdsfd
+
+<i class="dx icon-gou"></i>
 </div>
 </template>
 <script>
@@ -18,14 +18,7 @@ dsfdsfd
 
         },
         mounted() {
-            this.test_der
 
-            this.post("msg_e", {
-                name: "程国庆",
-                age: 26
-            }, function(data) {
-                console.log(data);
-            })
         },
     }
 

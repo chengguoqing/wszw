@@ -1,16 +1,10 @@
 var url_d = "https://api.cangniaowl.com/v1/"
-import Mock from 'mockjs';
 import router from './router'
 var wx = require('weixin-js-sdk');
 import axios from "axios"
 export default {
     install(Vue) {
-        Vue.prototype.test_der = Mock.mock(url_d + 'msg_e', function (options) {
-            return Mock.mock({
-                email: '@EMAIL'
-            })
-        });
-
+  
         Vue.prototype.post = function (url, dtat, call) {
             axios({
                 method: 'post',
@@ -115,9 +109,6 @@ export default {
             })
         }
 
-        Vue.prototype.Title = function (title, ty) {
-            document.title = title
-        }
 
         Vue.prototype.wx_config = function (data) {
             wx.config({

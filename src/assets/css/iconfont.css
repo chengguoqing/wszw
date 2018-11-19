@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "dx";
+    src: url('../font/iconfont.ttf');
+}
+
+.dx {
+    font-family: "dx" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gou:before {
+    content: "\e63b";
+}
+
+.icon-cc-user:before {
+    content: "\e6af";
+}
+
+.icon-iconfontwenhao1:before {
+    content: "\e60b";
+}
+
+.icon-time:before {
+    content: "\e629";
+}
+
+.icon-compile:before {
+    content: "\e617";
+}
+
+.icon-shouyi:before {
+    content: "\e62d";
+}
+
+.icon-lajixiang:before {
+    content: "\e626";
+}
+
+.icon-nitification:before {
+    content: "\e61e";
+}
+
+.icon-plus-set:before {
+    content: "\e72e";
+}
+
+.icon-tixian:before {
+    content: "\e6e2";
+}
+
+.icon-right:before {
+    content: "\e68b";
+}
+
+.icon-wenhao:before {
+    content: "\e645";
+}
+
+.icon-suo:before {
+    content: "\e619";
+}
+
+.icon-add:before {
+    content: "\e762";
+}
+
+.icon-down:before {
+    content: "\e638";
+}
+
+.icon-wenjian:before {
+    content: "\e625";
+}
+
+.icon-upload:before {
+    content: "\e628";
+}
