@@ -251,38 +251,12 @@ html {
 
 .f_i {
     display: inline-block;
-    background: url('../img/xbt.png?v=5');
+
     background-size: 360px;
     vertical-align: middle !important
 }
 
-.f_a {
-    display: inline-block;
-    background: url('https://mall.cangniaowl.com/static/img/abt.png?=10');
-    background-size: 360px;
-    vertical-align: middle !important
-}
 
-.f_p {
-    display: inline-block;
-    background: url('https://mall.cangniaowl.com/static/img/bbt.png');
-    background-size: 360px;
-    vertical-align: middle !important
-}
-
-.f_m {
-    display: inline-block;
-    background: url('https://mall.cangniaowl.com/static/img/huiyaun.png');
-    background-size: 360px;
-    vertical-align: middle !important
-}
-
-.f_act {
-    display: inline-block;
-    background: url('https://mall.cangniaowl.com/static/img/168/anniu.png');
-    background-size: 360px;
-    vertical-align: middle !important
-}
 
 .f_q {
     display: inline-block
