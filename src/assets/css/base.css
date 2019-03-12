@@ -251,7 +251,7 @@ html {
 
 .f_i {
     display: inline-block;
-
+    background: url(../img/xbt.png);
     background-size: 360px;
     vertical-align: middle !important
 }
@@ -862,7 +862,7 @@ textarea {
 }
 
 .ye {
-    color: #FD7C26 !important
+    color: #fe7c18 !important
 }
 
 .cz {
@@ -1042,7 +1042,7 @@ em {
 }
 
 .ls {
-    color: #474d73 !important;
+    color: #1d9fee !important;
 }
 
 .lser {

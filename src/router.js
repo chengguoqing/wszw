@@ -10,7 +10,7 @@ export default new Router({
             name: 'index',
             component: index,
             meta: {
-                title: '标题'
+                title: '飞扬冰上运动中心'
             }
 
     }
