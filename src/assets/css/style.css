@@ -31,6 +31,32 @@ body {
     border: 0px;
 }
 
-.van-number-keyboard.van-number-keyboard--default{
+.van-number-keyboard.van-number-keyboard--default {
     z-index: 10000 !important
+}
+
+
+
+.sd_jh_SDd {
+    text-align: center;
+    border: 1px solid #FE7C17;
+    color: #FE7C17;
+    line-height: 0.9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.sd_jh_SDd.act {
+    background: #FE7C17;
+    color: #fff
+}
+
+.sdf_kj_dert.ab {
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+    z-index: 100;
+    background: #fff;
 }
