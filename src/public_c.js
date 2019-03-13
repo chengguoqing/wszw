@@ -25,7 +25,7 @@ export default {
 
         Vue.prototype.time_c = function (t) {
             let time = new Date()
-            time.setTime(t * 1000)
+            time.setTime(t)
             let Year = time.getFullYear(),
                 Month = time.getMonth() + 1,
                 Data = time.getDate() < 10 ? 0 + '' + time.getDate() : time.getDate()

@@ -1,4 +1,36 @@
-body{
-    background: #F2F2F2;
+body {
+    background: #E1E7EB;
     padding-bottom: 80px;
+}
+
+.dx_body {
+    padding-top: 45px;
+}
+
+.sdf_kj_dert {
+    padding-left: 20px;
+    line-height: 40px;
+}
+
+.sd_jjh_der {
+    position: relative;
+    top: 2px;
+}
+
+.dsf_jjh_dert {
+    background: #F5F5F5 !important;
+}
+
+.sdf_jh_df {
+    line-height: 1.6
+}
+
+.lijiyuding {
+    background: #fe7c18;
+    color: #fff;
+    border: 0px;
+}
+
+.van-number-keyboard.van-number-keyboard--default{
+    z-index: 10000 !important
 }

@@ -1,5 +1,5 @@
 <template>
-<div >
+<div class="Sd_jh_Dert">
   
         <section class="pr banner_de">
             <van-swipe :autoplay="3000" class="h100">
@@ -25,7 +25,7 @@
      <i class="f_i dsfd_a"></i>
             </p>
                
-            <p class="fz13">
+            <p class="fz12">
                 课程预约
             </p>
         </section>
@@ -34,7 +34,7 @@
      <i class="f_i dsfd_a ab"></i>
             </p>
                
-            <p class="fz13">
+            <p class="fz12">
                 办理储值卡
             </p>
         </section>
@@ -44,7 +44,7 @@
      <i class="f_i dsfd_a ac"></i>
             </p>
                
-            <p class="fz13">
+            <p class="fz12">
                 冰场简介
             </p>
         </section>
@@ -54,7 +54,7 @@
      <i class="f_i dsfd_a ad"></i>
             </p>
                
-            <p class="fz13">
+            <p class="fz12">
                 教练介绍
             </p>
         </section>
@@ -64,13 +64,13 @@
    
     <section class="mt10 bgff">
         <van-row class="pl10 pt10 pm10 btm" v-for="sd in 5">
-            <van-col span="16">
+            <van-col span="17">
                 <p class="dian z3 fz16">单次滑冰卡（90分钟）</p>
                 <p class="fz12 ls mt5">最早可订明日票  有条件退 无需取票</p>
                 <p class="z9 fz13 mt5">新品    购票须知 >
                 </p>
             </van-col>
-            <van-col span="8" class="cen ye fz12 pt5">
+            <van-col span="7" class="cen ye fz12 pt5">
                     ￥<span class="fz20">1080</span>
                 <van-button class="Sd_deretx" @click="show_er=true">立即预订</van-button>
             </van-col>
@@ -100,34 +100,43 @@
     </section>
     
     <van-popup v-model="show_er" position="bottom" > 
-        <section class="pt10 pm10">
-            <van-row>
-                <van-col span="20"> <span class="danci_der">单次滑冰卡</span></van-col>
-                <van-col span="4" class="tr pr10">  <i class="f_i close_derr"  @click="show_er=false"></i></van-col>
-            </van-row>
+        <section class="pt10 pm10 dsf_jjh_dert cen pr">
+            
+            <span class="fz14">购买须知</span>
+              <i class="f_i close_derr"  @click="show_er=false"></i>
            
             </section>
         
-        <section class="btm pd pt10 pm10 fz14">
-            <p class="z3">购票说明</p>
-            <section class="z6 dsf_ddert">
-        有效时间：有效期为356天
-使用方法：线下取票，刷卡进场，请到现场客服中 心处取票检票过闸
-退款说明：未检票之前均可退款，退款不收手续费，  一笔订单支持部分退款。已用不退款。
-费用包含：金牌教练1：1五次卡一线
-            </section>
-            
-         
-        
+        <section class="btm pt10 pm10 fz16 pd">
+            <span>单次滑冰卡</span>
+        </section>
+        <section class="pd pt10 pm10 sdf_jh_df  z6 btm fz12">
+              <span class="z3 fz14">  预订说明</span> <br>
+          <span>  预订时间：随买随用，预订成功后可立即使用</span><br>
+  <span>使用期限：选择的使用日期当天有效</span>
         </section>
         
         
-           <van-row class="btm sdf_kj_dert mt10">
-                <van-col span="16" class="ye">
+              <section class="pd pt10 pm10 sdf_jh_df  z6 btm fz12">
+              <span class="z3 fz14">  费用说明</span> <br>
+          <span>  单次滑冰卡1张</span>
+        </section>
+        
+        
+              <section class="pd pt10 pm10 sdf_jh_df  z6 btm fz12">
+              <span class="z3 fz14">  使用说明</span> <br>
+          <span>  无需取票，凭二维码直接验证入园</span><br>
+  <span>开放时间：06:30-17:00（瘦西湖）</span>
+        </section>
+         
+ 
+        
+           <van-row class="btm sdf_kj_dert ">
+                <van-col span="16" class="red">
         <span class="sd_jjh_der">￥ <span class="fz24">1080</span> <span class="fz12">起</span></span>
     </van-col>
                 <van-col span="8">
-                <van-button class="lijiyuding w100">立即预订</van-button>
+                <van-button class="lijiyuding w100" @click="hf('submit_order')">立即预订</van-button>
                 </van-col>
             </van-row>
         
@@ -154,6 +163,13 @@
     }
 
 </script>
+<style>
+  .Sd_jh_Dert  .van-popup.van-popup--bottom{
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      overflow: hidden;
+    }
+</style>
 <style scoped>
     .banner_de{
         height: 140px;
@@ -175,7 +191,10 @@
     .sad_topd{
         height: 43px;
         line-height: 43px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+    }
+    .sad_topd i{
+        transform: scale(0.85)
     }
     .dsfd_a{
         width: 43px;
@@ -240,29 +259,20 @@
         background-position: -107px -92px;
     }
     .danci_der{
-        border-left: 4px solid #009ddc;
         padding-left: 10px;
     }
     .close_derr{
         width: 19px;
         height: 19px;
         background-position: -156px -95px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        transform: scale(0.85)
     }
     .dsf_ddert{
         line-height: 23px;
         margin-top: 5px;
     }
-    .lijiyuding{
-        background: #fe7c18;
-        color: #fff;
-        border: 0px;
-    }
-    .sdf_kj_dert{
-        padding-left: 20px;
-    line-height: 40px;
-    }
-    .sd_jjh_der{
-        position: relative;
-        top: 2px;
-    }
+  
 </style>
