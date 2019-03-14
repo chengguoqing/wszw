@@ -29,7 +29,7 @@
                 课程预约
             </p>
         </section>
-        <section class="box_a">
+        <section class="box_a" @click="ershow=true" >
             <p class="sad_topd">
      <i class="f_i dsfd_a ab"></i>
             </p>
@@ -126,6 +126,28 @@
     <dibu idx="0"></dibu>
     
     
+    
+    
+    <van-dialog
+  v-model="ershow"
+   :showConfirmButton="false"
+>
+        
+    <section class="bghs pt5 pm5 pr cen">
+        <i class="f_i huangguang"></i>
+        <span class="cz ml10 fz15">绑定会员</span>
+       <van-icon name="cross" class="sd_dertx" @click="ershow=false"/>
+    </section>
+        
+        <section class="btm pd pt20 pm20">
+            <van-button type="warning" plain class="w100" @click="ershow=false;hf('binding_members')">线下已有会员，绑定会员</van-button>
+              <van-button type="warning" class="w100 mt10" @click="ershow=false;hf('register_member')">注册会员</van-button>
+        </section>
+  
+</van-dialog>
+    
+    
+    
 </div>
 </template>
 <script>
@@ -133,7 +155,8 @@
     export default {
         data() {
             return {
-                show_er:false
+                show_er:false,
+                ershow:false
             }
         },
         components: {
@@ -233,5 +256,15 @@ dibu
         line-height: 23px;
         margin-top: 5px;
     }
-  
+    .huangguang{
+        width: 33px;
+        height: 27px;
+        background-position: -247px -269px;
+        transform: scale(0.8)
+    }
+    .sd_dertx{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
 </style>
