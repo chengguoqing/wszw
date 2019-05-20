@@ -11,7 +11,6 @@
 }
 
 body {
-    max-width: 640px;
     margin: auto;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -20,7 +19,12 @@ body {
     font-family: 'Microsoft YaHei';
 
 }
-
+.pr120{
+    padding-right: 120px
+}
+.sz{
+    cursor: pointer
+}
 .st {
     font-family: SimSun
 }
@@ -480,39 +484,39 @@ em {
 }
 
 .ml20 {
-    margin-left: 20px
+    margin-left: 20px !important
 }
 
 .ml30 {
-    margin-left: 30px
+    margin-left: 30px !important
 }
 
 .ml40 {
-    margin-left: 40px
+    margin-left: 40px !important
 }
 
 .ml50 {
-    margin-left: 50px
+    margin-left: 50px !important
 }
 
 .ml60 {
-    margin-left: 60px
+    margin-left: 60px !important
 }
 
 .ml70 {
-    margin-left: 70px
+    margin-left: 70px !important
 }
 
 .ml80 {
-    margin-left: 80px
+    margin-left: 80px!important
 }
 
 .ml100 {
-    margin-left: 100px
+    margin-left: 100px!important
 }
 
 .m90 {
-    margin-left: 90px
+    margin-left: 90px!important
 }
 
 .ml110 {

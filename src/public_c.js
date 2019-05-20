@@ -1,25 +1,62 @@
-var url_d = "https://api.cangniaowl.com/v1/"
+var url_d = "/"
 import router from './router'
 var wx = require('weixin-js-sdk');
 import axios from "axios"
+var CryptoJS = require("crypto-js");
+var key = "duxinggongchengguoqingguangzoulg"
 export default {
     install(Vue) {
-  
-        Vue.prototype.post = function (url, dtat, call) {
-            axios({
-                method: 'post',
-                url: url_d + url,
-                data: dtat
-            }).then((res) => {
-                call(res.data)
+        Vue.prototype.base_url = "http://127.0.0.1:8360/"
+        Vue.prototype.post = function (url, dtat, type) {
+            var encrypt = CryptoJS.AES.encrypt(JSON.stringify(dtat), CryptoJS.enc.Utf8.parse(key), {
+                mode: CryptoJS.mode.ECB,
+                padding: CryptoJS.pad.Pkcs7
             });
+            var sd_df = {
+                token: encrypt.toString()
+            }
+            var sd_Df = ""
+               let th = this
+            return new Promise((resolve, reject) => {
+                axios({
+                    method: 'post',
+                    url: url_d + url,
+                    data: sd_df
+                }).then((res) => {
+                    sd_Df = res
+                    var decrypt = CryptoJS.AES.decrypt(res.data.data, CryptoJS.enc.Utf8.parse(key), {
+                        mode: CryptoJS.mode.ECB,
+                        padding: CryptoJS.pad.Pkcs7
+                    });
+                    decrypt = decrypt.toString(CryptoJS.enc.Utf8)
+                    resolve(JSON.parse(decrypt))
+
+                }).catch(err => {
+                    if (sd_Df.data.code == 0) {
+                        th.$message.success(sd_Df.data.msg);
+                    }
+                    if (sd_Df.data.code == -1) {
+                        th.$message.error(sd_Df.data.msg);
+                    }
+                     resolve(sd_Df.data)
+                })
+
+            })
         }
 
         Vue.prototype.get = function (url, dtat, call) {
+            let th = this
             axios.get(url_d + url, {
                 params: dtat
             }).then(function (response) {
-                call(response)
+                if (response.data.code == 0) {
+                    th.$message({
+                        message: response.data.msg,
+                        type: 'success'
+                    });
+                }
+
+                call(response.data.data)
             })
         }
 
@@ -157,6 +194,43 @@ export default {
                     ]
             });
 
+        }
+
+
+        Vue.prototype.editorOption = {
+            modules: {
+                toolbar: [
+              ['bold', 'italic'], //加粗，斜体，下划线，删除线
+              [{
+                        'header': 1
+                    }, {
+                        'header': 2
+                    }], // 标题，键值对的形式；1、2表示字体大小
+              [{
+                        'indent': '-1'
+                    }, {
+                        'indent': '+1'
+                    }], // 缩进
+              [{
+                        'size': ['small', false, 'large', 'huge']
+                    }], // 字体大小
+              [{
+                        'color': []
+                    }, {
+                        'background': []
+                    }], // 字体颜色，字体背景颜色
+              [{
+                        'font': []
+                    }], //字体
+              [{
+                        'align': []
+                    }], //对齐方式
+
+              ['clean'], //清除字体样式
+              ['image', 'video'] //上传图片、上传视频
+
+            ]
+            }
         }
 
 
