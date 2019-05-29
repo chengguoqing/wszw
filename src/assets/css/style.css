@@ -1,6 +1,7 @@
 .sd_df_der {
-    height: 65px;
-    background: #000
+    line-height: 40px !important;;
+    height: 40px !important;
+    background: #CCCCCC
 }
 
 .sd_jhj_d {
@@ -90,3 +91,22 @@
 .sd_jh_wer.ab {
     width: 1200px;
 }
+
+.sd_df_er{
+    width: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

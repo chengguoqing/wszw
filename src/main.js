@@ -46,31 +46,31 @@ Vue.use(VueQuillEditor)
 
 
 
-router.beforeEach((to, from, next) => {
-    if (to.path == "/admin" && VueCookies.get("user_id")) {
-        next({
-            path: ''
-        })
-        return
-    }
-
-    if (to.meta.requireAuth) { // 判断该路由是否需要登录权限
-        if (VueCookies.get("user_id")) {
-            next();
-        } else {
-            next({
-                path: '/admin',
-                query: {
-                    redirect: to.name
-                } // 将跳转的路由path作为参数，登录成功后跳转到该路由
-            })
-        }
-    } else {
-        next();
-    }
-
-
-})
+//router.beforeEach((to, from, next) => {
+//    if (to.path == "/admin" && VueCookies.get("user_id")) {
+//        next({
+//            path: ''
+//        })
+//        return
+//    }
+//
+//    if (to.meta.requireAuth) { // 判断该路由是否需要登录权限
+//        if (VueCookies.get("user_id")) {
+//            next();
+//        } else {
+//            next({
+//                path: '/admin',
+//                query: {
+//                    redirect: to.name
+//                } // 将跳转的路由path作为参数，登录成功后跳转到该路由
+//            })
+//        }
+//    } else {
+//        next();
+//    }
+//
+//
+//})
 
 
 new Vue({

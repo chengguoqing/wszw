@@ -3,17 +3,17 @@
    
 <el-container>
   <el-header class="sd_df_der">
-        <img class="sd_jhj_d" src="https://www.kxhtml.com/console/images/logo.svg?v=201708221756">
+       <el-row :gutter="20">
+           <el-col :span="12" class="fz14">紫光运营后台</el-col>
+           <el-col :span="12" class="tr fz12">
+    管理员:xx<span class="ls">[退出]</span>
+    </el-col>
+       </el-row>
     </el-header>
   <el-container  class="sd_deet">
     <el-aside width="200px">
     	<div class="sd_jh_der">
-            <section class="cen pm20">
-                <img :src="$store.state.user_info.touxiang" class="usd_deert">
-                <p class="cen cf fz14 mt10">
-            {{$store.state.user_info.user_name}}
-                </p>
-            </section>
+        
             
             
             <el-menu
@@ -27,46 +27,19 @@
       active-text-color="#2464C8">
               
        <el-menu-item index="/">
-    <i class="el-icon-menu"></i>
-    <span slot="title">首页</span>
+
+    <span slot="title">零配件管理</span>
   </el-menu-item>
                 
                 
                 
-                       <el-submenu index="/shopp">
-    <template slot="title">
-      <i class="el-icon-menu"></i>
-      <span slot="title">商品</span>
-    </template>
+                       
 
-    <el-menu-item-group>
-     <el-menu-item index="/shopp/sp_list">商品列表</el-menu-item>
-    </el-menu-item-group>
-  <el-menu-item-group>
-     <el-menu-item index="/shopp/sp_fl">商品分类</el-menu-item>
-    </el-menu-item-group>
-
-</el-submenu>
-
-
-        
-                
-                
-
-       <el-menu-item index="/wenzhang">
-    <i class="el-icon-menu"></i>
-    <span slot="title">文章列表</span>
-  </el-menu-item>   
-
-   
-                 <el-menu-item index="/dianpu">
-    <i class="el-icon-menu"></i>
-    <span slot="title">店铺信息</span>
-  </el-menu-item>  
+         
                     
                  <el-menu-item index="/user_msg">
-    <i class="el-icon-menu"></i>
-    <span slot="title">用户管理</span>
+
+    <span slot="title">二手手机管理</span>
   </el-menu-item>          
  
 
@@ -75,13 +48,6 @@
 
 
 
-
-	   <ul class="sd_deeett">
-           <li  @click="out_back">
-              退出登录
-                
-            </li>
-        </ul>
 
 
 	</div>
