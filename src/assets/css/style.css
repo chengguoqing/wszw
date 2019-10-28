@@ -1,112 +1,52 @@
-.sd_df_der {
-    line-height: 40px !important;;
-    height: 40px !important;
-    background: #CCCCCC
+body {
+    background: #050C2F;
+    min-width: 1600px;
 }
 
-.sd_jhj_d {
+.dsfdsf_se {
     position: absolute;
-    left: 20px;
-    top: 15px;
-    width: 140px;
+    content: "";
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
+    border-radius: 10px;
+    border: 1px solid #48EDFE;
+    clip: rect(0, 30px, 30px, 0px)
+}
+/* clip: rect(160px, 531px, 531px, 0px) 1 上 右*/
+.dsfdsf_se.ab {
+    clip: rect(0px, 260px, 30px, 220px)
 }
 
-.el-aside {
-    background: #47484B
+.dsfdsf_se.ac {
+    clip: rect(800px, 820px, 836px, 0px)
 }
 
-.avatar-uploader .el-upload {
-    border: 1px dashed #d9d9d9;
-    border-radius: 6px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+.dsfdf_jh_dr .dsfdsf_se.ab {
+    clip: rect(0, 130px, 30px, 70px)
 }
 
-.avatar-uploader .el-upload:hover {
-    border-color: #409EFF;
+.dsfdf_jh_dr .dsfdsf_se.ac {
+    clip: rect(100px, 30px, 130px, 0px)
 }
 
-.avatar-uploader-icon {
-    font-size: 28px;
-    color: #8c939d;
-    width: 78px;
-    height: 78px;
-    line-height: 78px !important;
-    text-align: center;
+.dsfdf_jh_dr .dsfdsf_se.ad {
+    clip: rect(105px, 130px, 136px, 80px)
 }
 
-.avatar {
-    width: 78px;
-    height: 78px;
-    display: block;
+.dsfdsf_deert .dsfdsf_se.ac {
+    clip: rect(200px, 30px, 230px, 0px)
 }
 
-.el-table tbody td,
-.el-table tbody th {
-    padding: 8px 0px !important
+.dsfdsf_deert .dsfdsf_se.ab {
+    clip: rect(0, 531px, 30px, 490px)
 }
 
-.el-menu-item-group__title {
-    padding: 0 !important
+.dsfdsf_deert .dsfdsf_se.ad {
+    clip: rect(190px, 531px, 531px, 500px)
 }
 
-.el-menu {
-    border: 0px !important;
+.dsfdsfd_deert.ab .dsfdsf_se.ab {
+     clip: rect(0, 531px, 30px, 500px)
 }
-
-.hg_deet {
-    line-height: 1;
-    margin-top: 10px;
-}
-
-.ql-container.ql-snow,
-.ql-editor {
-    min-height: 200px;
-    max-height: 400px;
-}
-
-.ql-editor {
-    max-height: 390px;
-}
-
-.sddf_drrtimg .el-dialog__header {
-    display: none
-}
-
-.el-dialog__body {
-    padding-top: 10px !important;
-}
-
-.el-dialog__header {
-    padding-bottom: 0px !important;
-}
-
-
-.sd_jh_wer {
-    width: 600px;
-
-}
-
-.sd_jh_wer.ab {
-    width: 1200px;
-}
-
-.sd_df_er{
-    width: 600px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

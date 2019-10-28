@@ -1,7 +1,5 @@
 # 独行工匠
-##滑冰
-原型地址
-http://www.sz-egoal.cn:2100/
+##智慧消防
 
 
 ## Project setup

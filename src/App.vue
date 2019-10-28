@@ -1,137 +1,172 @@
 <template>
-  <div id="app">
-   
-<el-container>
-  <el-header class="sd_df_der">
-       <el-row :gutter="20">
-           <el-col :span="12" class="fz14">紫光运营后台</el-col>
-           <el-col :span="12" class="tr fz12">
-    管理员:xx<span class="ls">[退出]</span>
-    </el-col>
-       </el-row>
-    </el-header>
-  <el-container  class="sd_deet">
-    <el-aside width="200px">
-    	<div class="sd_jh_der">
-        
-            
-            
-            <el-menu
-      :default-active="$route.path"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
-      background-color="#47484B"
-      text-color="#fff"
-        :router="true"
-      active-text-color="#2464C8">
-              
-       <el-menu-item index="/">
+    <div id="app">
 
-    <span slot="title">零配件管理</span>
-  </el-menu-item>
+        <div class="dsfdf_eerr">
+
+        </div>
+        <div class="dsf_derrt row">
+            <div class="ssdd_jder">
                 
-                
-                
-                       
+                <ul class="sdd_dertxs">
+                    <li v-for="(sd,idx) in mejshd" :class="sd.cls" class="pr" @click="ssdff(sd,idx)">
+                        <div class="ssd_deert">
+                            <i class="el-icon-s-grid cf fz24 cz"></i>
+                            <span class="cf fz16 cz ml10">{{sd.name}}</span>
+                            <i class="el-icon-arrow-right cf  dsf_deer cz" v-if="sd.xiaji.length>0"></i>
+                        </div>
+                        <div class="ssdd_der" v-if="sd.xiaji.length>0&&sd.cls">
+                            <p v-for="(sd,idx) in sd.xiaji" @click="ssdsfs(sd,idx)" :class="sd.cls">{{sd.name}}</p>
+                        </div>
+                    </li>
+                </ul>
+                <span class="dsfdsf_se"></span>
+                <span class="dsfdsf_se ab"></span>
+                <span class="dsfdsf_se ac"></span>
+            </div>
+            <div class="col pl10">
+                <router-view v-wechat-title="$route.meta.title" />
+            </div>
 
-         
-                    
-                 <el-menu-item index="/user_msg">
 
-    <span slot="title">二手手机管理</span>
-  </el-menu-item>          
- 
-
-    
-    </el-menu>
+        </div>
 
 
 
-
-
-	</div>
-    </el-aside>
-    <el-main>
-        <router-view v-wechat-title="$route.meta.title"/>
-    </el-main>
-  </el-container>
-</el-container>
-      
-    
-  </div>
+    </div>
 </template>
 
 <script>
     export default {
         data() {
             return {
-                left_mu: [{
-                    name: "首页",
-                    path: "",
-                    bz:"1"
+                mejshd: [{
+                    cls: "act",
+                    url: "",
+                    xiaji: [],
+                    name: "告警看板"
                 }, {
-                    name: "用户管理",
-                    path: "user_msg",
-                     bz:"2"
-                }],
-                moren_ds:" ",
-                user_fo: ""
+                    cls: "",
+                    url: "/",
+                    xiaji: [{
+                            name: "自动喷淋系统",
+                            url: "zidongpeng",
+                            cls: ""
+                        },
+                        {
+                            name: "室内消防栓系统",
+                            cls: ""
+                        }
+                    ],
+                    name: "消防灭火系统"
+                }, {
+                    cls: "",
+                    url: "",
+                    xiaji: [],
+                    name: "火灾报警预警系统"
+                }, {
+                    cls: "",
+                    url: "",
+                    xiaji: [],
+                    name: "防火分区及疏散系统"
+                }, {
+                    cls: "",
+                    url: "",
+                    xiaji: [],
+                    name: "消防台账管理系统"
+                }]
             }
         },
         components: {
 
         },
         methods: {
-            out_back() { //退出登录
-                this.$cookies.remove("user_id");
-                this.hf('admin?redirect=' + this.$route.name)
-                this.$message({
-                    message: '退出登录成功',
-                    type: 'success'
-                });
+            ssdff(sd, idx) {
+                if (sd.xiaji.length <= 0) {
+                    this.hf(sd.url)
+                }
+                this.mejshd.map(a => {
+                    a.cls = ""
+                })
+                sd.cls = "act"
+
             },
-            handleOpen(e){
-                console.log(2);
-            },
-            handleClose(e){
-                
+            ssdsfs(sd, idx) {
+                this.mejshd.map(a => {
+                    a.xiaji.map(b => {
+                        b.cls = ""
+                    })
+                })
+                sd.cls = "act"
+                this.hf(sd.url)
             }
         },
         mounted() {
-        this.$store.state.user_info= this.$cookies.get("user_info")
+
         },
     }
 
 </script>
 
 
-<style>
-    .sd_deet {
-        height: 100vh;
+<style scope>
+    .dsfdf_eerr {
+        height: 85px;
+        background: url("./assets/img/header.png") center center;
     }
 
-    .sd_jh_der {
-        padding-top: 20px;
+    .dsf_derrt {
+        padding: 10px;
     }
 
-    .sd_deeett li {
-      line-height: 45px;
-        font-size: 14px;
-        color: #fff;
+    .ssdd_jder {
+        width: 260px;
+        background: #182249;
+        border: 1px solid #3D79E4;
+        border-radius: 10px;
+      
+/*        overflow: hidden;*/
+        position: relative;
+    }
+    
+    .sdd_dertxs{
+          border-radius: 10px;
+        overflow: hidden;
+    }
+    .sdd_dertxs li .ssd_deert {
         padding-left: 25px;
+        padding-right: 25px;
+        line-height: 70px;
+        cursor: pointer;
     }
 
-    .sd_jh_der li:hover,
-    .sd_jh_der li.act {
-        background: #2D2E30;
-        color: #2464C8
+    .sdd_dertxs li.act,
+    .sdd_dertxs li:hover {
+        background-image: linear-gradient(270deg, #4A8AFF 0%, #475DFF 100%);
     }
 
-    .usd_deert {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
+    .dsf_deer {
+        position: absolute;
+        right: 10px;
+        top: 25px;
+    }
+
+    .ssdd_der {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: #050D2D;
+        padding-left: 60px;
+        line-height: 50px;
+        color: #CACBCF;
+        font-size: 15px;
+    }
+
+    .ssdd_der p {
+        cursor: pointer
+    }
+
+    .ssdd_der p:hover,
+    .ssdd_der p.act {
+        color: #4A8AFF;
     }
 
 </style>
