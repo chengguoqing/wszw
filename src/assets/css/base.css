@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
 }
 
 .sd_jsdf {
@@ -256,7 +256,6 @@ html {
 .f_i {
     display: inline-block;
     background: url(../img/xbt.png);
-    background-size: 360px;
     vertical-align: middle !important
 }
 
@@ -456,7 +455,7 @@ em {
 }
 
 .ml10 {
-    margin-left: 10px
+    margin-left: 10px !important
 }
 
 .ml5 {
@@ -1427,24 +1426,13 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 330px) {
-    html {
-        font-size: 12px !important;
-    }
-}
-
-@media screen and (min-width: 375px) {
-    html {
-        font-size: 16px !important;
-    }
-}
-
-@media screen and (min-width: 410px) {
-    html {
-        font-size: 18px !important;
-    }
-}
 
 .kx {
     vertical-align: bottom
+}
+.row{
+    display: flex
+}
+.col{
+    flex: 1
 }
