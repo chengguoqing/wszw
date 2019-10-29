@@ -1,7 +1,19 @@
 module.exports = {
-    
     baseUrl: './',
-    lintOnSave: false,
+    lintOnSave: true,
+    css: {
+        loaderOptions: {
+            postcss: {
+                plugins: [
+                     require('autoprefixer'),
+                    require('postcss-pxtorem')({
+                        rootValue: 16,
+                        propList: ['*']
+                    })
+                ]
+            }
+        }
+    },
     devServer: { //跨域 
         open: true, //配置自动启动浏览器
         proxy: {

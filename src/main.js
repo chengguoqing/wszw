@@ -13,7 +13,7 @@ import VueParticles from 'vue-particles'
 import VueCookies from 'vue-cookies'
 import SlideVerify from 'vue-monoplasty-slide-verify';
 import VueAMap from 'vue-amap';
-
+import rem from './rem';
 Vue.use(SlideVerify);
 Vue.use(VueParticles)
 Vue.use(VueCookies)

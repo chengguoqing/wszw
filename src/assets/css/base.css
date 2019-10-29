@@ -4,7 +4,9 @@
     -webkit-box-sizing: border-box !important;
     box-sizing: border-box !important;
 }
-
+html{
+    font-size: 16px;
+}
 .sd_jsdf {
     -webkit-box-sizing: border-box !important;
     box-sizing: border-box !important;
