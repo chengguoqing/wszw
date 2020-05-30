@@ -1,52 +1,202 @@
 body {
-    background: #050C2F;
-/*    min-width: 1600px;*/
+    background: url(../img/bgtu.png) 100% 100%;
 }
 
-.dsfdsf_se {
+.kkjjnnxrt {
     position: absolute;
-    content: "";
-    left: -1px;
-    right: -1px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #2FFFFF;
+    line-height: 2.6;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.jhgsdleft {
+    width: 360px;
+}
+
+.paimingnjhnjd {
+    height: 365px;
+    overflow: hidden;
+    border: 1px solid #076DA5;
+    border-top-left-radius: 40px;
+    overflow: hidden
+}
+
+.nbl {
+    box-shadow: #076DA5 0px 0px 10px inset;
+}
+
+.kjhnmcrert {
+    height: 35px;
+    line-height: 35px;
+    padding-left: 30px;
+    background: linear-gradient(to right, #053574, #041D47);
+}
+
+.jhnxder {
+    width: 12px;
+    height: 12px;
+    background: #FFF008;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dsftyxrt {
+    font-size: 14px;
+    background: #04387D;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 3px 3px 3px 6px;
+
+}
+
+.dsftyxrt img {
+    width: 10px;
+    position: relative;
     top: -1px;
-    bottom: -1px;
-    border-radius: 10px;
-    border: 1px solid #48EDFE;
-    clip: rect(0, 30px, 30px, 0px)
-}
-/* clip: rect(160px, 531px, 531px, 0px) 1 上 右*/
-.dsfdsf_se.ab {
-    clip: rect(0px, 260px, 30px, 220px)
 }
 
-.dsfdsf_se.ac {
-    clip: rect(800px, 820px, 836px, 0px)
+.jjhbnnxert {
+    padding: 20px;
+    padding-top: 10px;
 }
 
-.dsfdf_jh_dr .dsfdsf_se.ab {
-    clip: rect(0, 130px, 30px, 70px)
+.jjhbnnxert {}
+
+.jjhbnnxert .el-table,
+.jjhbnnxert .el-table__expanded-cell {
+    background: transparent !important;
 }
 
-.dsfdf_jh_dr .dsfdsf_se.ac {
-    clip: rect(100px, 30px, 130px, 0px)
+.jjhbnnxert .el-table th,
+.jjhbnnxert .el-table tr {
+    background-color: transparent !important;
+    color: #fff
 }
 
-.dsfdf_jh_dr .dsfdsf_se.ad {
-    clip: rect(105px, 130px, 136px, 80px)
+.jjhbnnxert .el-table td, .jjhbnnxert .el-table th.is-leaf{
+    border-color: #042760;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px
 }
 
-.dsfdsf_deert .dsfdsf_se.ac {
-    clip: rect(200px, 30px, 230px, 0px)
+.jjhbnnxert .el-table thead{
+    background: #04245A;
+   
+}
+.jjhbnnxert .el-table thead .cell{
+     color: #2FFFFF !important;
+    text-align: center;
 }
 
-.dsfdsf_deert .dsfdsf_se.ab {
-    clip: rect(0, 531px, 30px, 490px)
+.el-table--enable-row-hover .el-table__body tr:hover>td,.el-table__body tr.current-row>td {
+ background-color: transparent !important;
+    cursor: pointer
 }
 
-.dsfdsf_deert .dsfdsf_se.ad {
-    clip: rect(190px, 531px, 531px, 500px)
+.paimingnjhnjd.ab{
+    height: 440px !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 40px;
+    margin-top: 15px;
+}
+.dfdrtyset{
+    width: 590px;
+    height: 570px;
+     border: 1px solid #076DA5;
 }
 
-.dsfdsfd_deert.ab .dsfdsf_se.ab {
-     clip: rect(0, 531px, 30px, 500px)
+.kjhnmcrert.ab{
+    padding-left: 15px;
+}
+.jjddrttyw{
+      border: 1px solid #076DA5;
+    height: 375px;
+    border-top-right-radius: 40px;
+}
+
+.dfrtyxert{
+     border: 1px solid #076DA5;
+    height: 230px;
+    border-bottom-right-radius: 40px;
+    margin-top: 15px;
+}
+.jjbnncrtty{
+    width: 100%;
+    height: 520px;
+    position: relative;
+    padding-right: 40px
+}
+.dfdgtyya:hover{
+    opacity: 0.8
+}
+.dfdgtyya{
+    font-size: 160px;
+    color: #FFF008;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.dfdgtyya.ab{
+    right: 45px;
+    top: 14px;
+}
+
+.sdrrttgsweteret{
+    padding: 0 20px;
+    height: 100%;
+    padding-bottom: 30px;
+}
+.kjhdrerty{
+    height: 190px;
+}
+
+.fgfdtyer{
+    width: 12px
+}
+.dftyurert{
+    height: 180px;
+}
+.jjhbhdsdrrt{
+    height: 175px;
+    background: rgba(4,56,125,0.5);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden
+}
+.dfgfdyuue{
+    text-align: center;
+    background: #515D8E;
+    line-height: 40px
+}
+.dfgfdyuue.ab{
+    background: #8D5864
+}
+.dfgfdyuue.ac{
+    background: #21748F
+}
+.fsdgdtyy{
+    text-align: center;
+    padding-top: 40px
+}
+
+.dsftyxrt.act{
+    background: #112247;
+    color: #999 !important
+}
+
+
+
+
+@media screen and (max-width: 1650px) {
+    .kkjjnnxrt {
+        line-height: 3.6
+    }
 }

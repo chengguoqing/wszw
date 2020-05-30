@@ -5,6 +5,7 @@ import router from './router'
 import Vant from 'vant';
 import public_c from './public_c.js'
 import './assets/css/base.css'
+import './assets/font/iconfont.css'
 import './assets/css/style.css'
 import VueWechatTitle from 'vue-wechat-title';
 import ElementUI from 'element-ui';

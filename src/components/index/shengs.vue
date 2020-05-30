@@ -1,9 +1,6 @@
 <template>
-    <div>
-        <div class="kjnjdrertt">
-            <tubiao :shuju="shuju"></tubiao>
-        </div>
-
+    <div class="kjnjdrertt">
+        <tubiao :shuju="shuju" type="1"></tubiao>
     </div>
 </template>
 <script>
@@ -14,9 +11,9 @@
                 shuju: {
                     visualMap: {
                         left: 'right',
-                       textStyle: {//设置字体颜色
-				color: '#fff'
-			},
+                        textStyle: { //设置字体颜色
+                            color: '#fff'
+                        },
                         min: 0,
                         max: 100,
                         text: ['非常高', '低'],
@@ -95,9 +92,8 @@
 </script>
 <style scoped>
     .kjnjdrertt {
-        height: 600px;
-        width: 600px;
-        border: 1px solid red
+        height: 100%;
+        width: 100%;
     }
 
 </style>
