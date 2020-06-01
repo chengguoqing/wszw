@@ -1,24 +1,30 @@
 <template>
     <div class="w100 h100">
-        <tubiao :shuju="shuju"></tubiao>
+        <tubiao :shuju="shuju" v-if="ssddf" ref="ddrrtty"></tubiao>
 
     </div>
 </template>
 <script>
     import tubiao from "@/components/tubiao"
     export default {
+        props: ['id'],
         data() {
             return {
+                ssddf: false,
                 shuju: {
                     legend: {
                         right: 30,
-                        top:10,
+                        top: 10,
                         textStyle: { //设置字体颜色
                             color: '#fff',
-                            fontSize:12
+                            fontSize: 12
                         },
-                        data: ['2018年排名', '2017年排名', '2016年排名', '2015年排名']
+                        data: []
                     },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+
                     grid: {
                         left: '3%',
                         right: '4%',
@@ -28,7 +34,7 @@
                     xAxis: {
                         type: 'category',
                         boundaryGap: false,
-                        data: ['太原', '大同', '朔州', '阳泉', '长治', '忻州', '吕梁', '晋中', '临汾', '运城', '晋城']
+                        data: []
                     },
                     textStyle: {
                         color: '#fff',
@@ -40,26 +46,7 @@
                         maxInterval: 10, //每个刻度最大为5
                         max: 40,
                     },
-                    series: [{
-                        name: '2018年排名',
-                        data: [30, 24, 30, 20, 10, 30, 16, 20, 30, 30, 26],
-                        type: 'line',
-                        smooth: true
-                    }, {
-                        name: '2017年排名',
-                        data: [10, 24, 30, 20, 10, 30, 6, 20, 10, 30, 26],
-                        type: 'line',
-                        smooth: true
-                    }, {
-                        name: '2016年排名',
-                        data: [40, 24, 30, 20, 10, 30, 16, 20, 10, 30, 26],
-                        type: 'line'
-                    }, {
-                        name: '2015年排名',
-                        data: [10, 24, 30, 20, 10, 30, 36, 20, 10, 30, 26],
-                        type: 'line',
-                        smooth: true
-                    }]
+                    series: []
                 }
             }
         },
@@ -67,10 +54,27 @@
             tubiao
         },
         methods: {
+            async jjhsdd(id) {
+                let res = await this.get("getshujufenxi")
+                res = res.data
+                this.shuju.xAxis.data = res.cityList
+                let dfgdfy = res.series
+                let jjsde = []
+                dfgdfy.map(a => {
+                    a.type = 'line'
+                    a.smooth = true
+                    jjsde.push(a.name)
 
+                })
+                this.shuju.series = dfgdfy
+                this.shuju.legend.data = jjsde
+                
+                this.ssddf = true
+                this.$refs.ddrrtty.setdsds(this.shuju)
+            }
         },
         mounted() {
-
+            this.jjhsdd(this.id)
         },
     }
 

@@ -19,7 +19,7 @@ body {
 }
 
 .paimingnjhnjd {
-    height: 365px;
+    height: 422px;
     overflow: hidden;
     border: 1px solid #076DA5;
     border-top-left-radius: 40px;
@@ -35,6 +35,9 @@ body {
     line-height: 35px;
     padding-left: 30px;
     background: linear-gradient(to right, #053574, #041D47);
+}
+.kjhnmcrert  tbody, .kjhnmcrert table {
+    border: 0 !important
 }
 
 .jhnxder {
@@ -100,14 +103,14 @@ body {
 }
 
 .paimingnjhnjd.ab{
-    height: 440px !important;
+    height: 460px !important;
     border-top-left-radius: 0;
     border-bottom-left-radius: 40px;
     margin-top: 15px;
 }
 .dfdrtyset{
     width: 590px;
-    height: 570px;
+    height: 616px;
      border: 1px solid #076DA5;
 }
 
@@ -116,13 +119,14 @@ body {
 }
 .jjddrttyw{
       border: 1px solid #076DA5;
-    height: 375px;
+    height: 419px;
     border-top-right-radius: 40px;
 }
 
 .dfrtyxert{
      border: 1px solid #076DA5;
-    height: 230px;
+    height: 260px;
+    height: 260px;
     border-bottom-right-radius: 40px;
     margin-top: 15px;
 }
@@ -193,10 +197,12 @@ body {
 }
 
 
-
-
-@media screen and (max-width: 1650px) {
-    .kkjjnnxrt {
-        line-height: 3.6
+  .dfgdfyuuxe{
+      overflow: hidden;
+        height: 53px;
     }
+.fdgdfyy{
+    height: 20px;
+    position: relative;
+    top: 4px;
 }

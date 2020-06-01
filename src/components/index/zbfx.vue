@@ -1,6 +1,6 @@
 <template>
     <div class="dfdgyyue h100">
-        <tubiao :shuju="shuju"></tubiao>
+        <tubiao :shuju="shuju" v-if="ssddf"></tubiao>
 
     </div>
 </template>
@@ -9,6 +9,7 @@
     export default {
         data() {
             return {
+                ssddf:false,
                 shuju: {
                     tooltip: {},
                     legend: {
@@ -27,7 +28,7 @@
                                 fontSize:"15"
                             }
                         },
-                          radius: 90,
+                        radius: 90,
                         indicator: [{
                                 name: '服务方式\n完备度',
                                 max: 100
@@ -51,34 +52,10 @@
                         ]
                     },
                     series: [{
-                        name: '预算 vs 开销（Budget vs spending）',
+                        name: '',
                         type: 'radar',
                         // areaStyle: {normal: {}},
-                        data: [{
-                                value: [100, 90, 30, 40, 50, 60],
-                                name: '2018',
-                                areaStyle: {
-                                    opacity: 0.5,
-
-                                }
-                            },
-                            {
-                                value: [80, 40, 40, 30, 10, 90],
-                                name: '2017',
-                                areaStyle: {
-                                    opacity: 0.5,
-
-                                }
-                            },
-                            {
-                               value: [90, 80, 70, 60, 50, 60],
-                                name: '2016',
-                                areaStyle: {
-                                    opacity: 0.5,
-
-                                }
-                            }
-                        ]
+                        data: [ ]
                     }]
                 }
             }
@@ -87,10 +64,14 @@
             tubiao
         },
         methods: {
-
+            async jjhsdd(){
+               let res =  await this.get("getzhibiao")
+                this.shuju.series[0].data=res.data
+                this.ssddf = true
+            }
         },
         mounted() {
-
+            this.jjhsdd()
         },
     }
 

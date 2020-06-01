@@ -6,6 +6,7 @@
 <script>
     import tubiao from "@/components/tubiao"
     export default {
+        props: ['data'],
         data() {
             return {
                 shuju: {
@@ -23,57 +24,18 @@
                             color: ['#FFF008', '#FFA800', '#A57100', '#C6513E']
                         }
                     },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{b}:{c}'
+                    },
                     series: [{
                         type: 'map',
                         mapType: 'HK', // 自定义扩展图表类型
                         label: {
-                            show: false
+                            show: true,
+                            color: "#fff"
                         },
-                        data: [{
-                                name: '大同市',
-                                value: 0
-                            },
-                            {
-                                name: '朔州市',
-                                value: 10
-                            },
-                            {
-                                name: '忻州市',
-                                value: 20
-                            },
-                            {
-                                name: '太原市',
-                                value: 30
-                            },
-                            {
-                                name: '吕梁市',
-                                value: 40
-                            },
-                            {
-                                name: '阳泉市',
-                                value: 50
-                            },
-                            {
-                                name: '晋中市',
-                                value: 60
-                            },
-                            {
-                                name: '临汾市',
-                                value: 70
-                            },
-                            {
-                                name: '长治市',
-                                value: 80
-                            },
-                            {
-                                name: '晋城市',
-                                value: 90
-                            },
-                            {
-                                name: '运城市',
-                                value: 100
-                            }
-                        ]
+                        data: this.data
                     }]
                 }
             }
@@ -85,7 +47,7 @@
 
         },
         mounted() {
-
+console.log(this.data);
         },
     }
 

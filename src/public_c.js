@@ -1,4 +1,4 @@
-var url_d = "/"
+var url_d = "http://www.duxinggj_xs.com/"
 import router from './router'
 var wx = require('weixin-js-sdk');
 import axios from "axios"
@@ -16,7 +16,7 @@ export default {
                 token: encrypt.toString()
             }
             var sd_Df = ""
-               let th = this
+            let th = this
             return new Promise((resolve, reject) => {
                 axios({
                     method: 'post',
@@ -38,25 +38,19 @@ export default {
                     if (sd_Df.data.code == -1) {
                         th.$message.error(sd_Df.data.msg);
                     }
-                     resolve(sd_Df.data)
+                    resolve(sd_Df.data)
                 })
 
             })
         }
 
         Vue.prototype.get = function (url, dtat, call) {
-            let th = this
-            axios.get(url_d + url, {
-                params: dtat
-            }).then(function (response) {
-                if (response.data.code == 0) {
-                    th.$message({
-                        message: response.data.msg,
-                        type: 'success'
-                    });
-                }
-
-                call(response.data.data)
+            return new Promise((resolve, reject) => {
+                axios.get(url_d + url, {
+                    params: dtat
+                }).then(function (response) {
+                     resolve(response.data)
+                })
             })
         }
 
