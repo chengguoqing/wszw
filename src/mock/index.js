@@ -9,9 +9,9 @@ export default {
          * @apiSuccess {Nubmer} code  状态码
          * @apiSuccess {String} msg  备注
          * @apiSuccess {Array} data  数据
-         * @apiSuccess {Nubmer} city  城市
-         * @apiSuccess {Nubmer} value  得分
-         * @apiSuccess {Nubmer} type  1上 2平 3下
+         * @apiSuccess {Nubmer} data.city  城市
+         * @apiSuccess {Nubmer} data.value  得分
+         * @apiSuccess {Nubmer} data.type  1上 2平 3下
          */
         Mock.mock(url_eer + 'getsxdata', function (options) {
             return Mock.mock({
@@ -84,9 +84,9 @@ export default {
          * @apiSuccess {Nubmer} code  状态码
          * @apiSuccess {String} msg  备注
          * @apiSuccess {Array} data  数据
-         * @apiSuccess {Nubmer} value  数据的值
-         * @apiSuccess {String} name  2018
-         * @apiSuccess {Object} areaStyle  areaStyle: { opacity: 0.5}
+         * @apiSuccess {Nubmer} data.value  数据的值
+         * @apiSuccess {String} data.name  2018
+         * @apiSuccess {Object} data.areaStyle  areaStyle: { opacity: 0.5}
          */
         Mock.mock(url_eer + 'getzhibiao', function (options) {
             return Mock.mock({
@@ -119,21 +119,19 @@ export default {
 
         })
         
-        
+    
         /**
-         * @api {get} getzhibiao 数据分析
-         * @apiName 指标分析
-         * @apiGroup index
-        * @apiParam {Number} type  1.总体排行 2.权力事项 3依申请事项 4.公共服务事项 5.进驻部门 6.指南要素
-          
+         * @api {get} getshujufenxi 数据分析
+         * @apiName 数据分析
+         * @apiGroup indexer
+         * @apiParam {Number} type  1.总体排行2.权力事项3依申请事项4.公共服务事项5.进驻部门6.指南要素
          * @apiSuccess {Nubmer} code  状态码
          * @apiSuccess {String} msg  备注
          * @apiSuccess {Object} data  数据
-         * @apiSuccess {Array} data>cityList  城市名称
-         * @apiSuccess {Array} data>series  2018
-         * @apiSuccess {String} data>series>name  线的名称
-         * @apiSuccess {String} data>series>data  数据值
-          
+         * @apiSuccess {Array} data.cityList  城市名称
+         * @apiSuccess {Array} data.series  
+         * @apiSuccess {String} sdata.eries.name  series.name线的名称
+         * @apiSuccess {Array} data.series.data  数据值[1,2,3,4,5,6]
          */
         Mock.mock(url_eer + 'getshujufenxi', function (options) {
             return Mock.mock({
@@ -163,18 +161,18 @@ export default {
         
         
           /**
-         * @api {get} ztgs 总体概况
+         * @api {get} getztgs 总体概况
          * @apiName 总体概况
-         * @apiGroup index
+         * @apiGroup indexsan
          * @apiSuccess {Nubmer} code  状态码
          * @apiSuccess {String} msg  备注
          * @apiSuccess {Object} data  数据
-         * @apiSuccess {Nubmer} data>ztgsa  省级政务服务平台
-         * @apiSuccess {Nubmer} data>ztgsab  进驻部门数量
-        * @apiSuccess {Nubmer} data>ztgsac  行政权力事项
-        * @apiSuccess {Nubmer} data>ztgsad  依申请事项
-        * @apiSuccess {Nubmer} data>ztgsae  办理时限压缩
-        * @apiSuccess {Nubmer} data>ztgsaf  证照信息
+         * @apiSuccess {Nubmer} data.ztgsa  省级政务服务平台
+         * @apiSuccess {Nubmer} data.ztgsab  进驻部门数量
+        * @apiSuccess {Nubmer} data.ztgsac  行政权力事项
+        * @apiSuccess {Nubmer} data.ztgsad  依申请事项
+        * @apiSuccess {Nubmer} data.ztgsae  办理时限压缩
+        * @apiSuccess {Nubmer} data.ztgsaf  证照信息
          */
         Mock.mock(url_eer + 'getztgs', function (options) {
             return Mock.mock({
