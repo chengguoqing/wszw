@@ -8,14 +8,15 @@
                 </p>
             </div>
         </div>
+        <p class="ls fz14 cen pt10">{{title}}</p>
         <div class="kijnncerrt mt20 pr ">
             <div class="nbl jhghdeert yj4 ls" @click="dfrty">目录导航</div>
             <div class="meulistdf gd" :class="yidongf?'act':''">
-                <div class="fz14  yj4 nbl jhhdfsdtyd" @click="fgdfyudrr">
+                <div class="fz14  yj4 nbl jhhdfsdtyd" @click="fgdfyudrr('')">
                     首页
                 </div>
 
-                <div class="fz14  yj4 nbl jhhdfsdtyd mt15" @click="fgdfyudrr">
+                <div class="fz14  yj4 nbl jhhdfsdtyd mt15" @click="fgdfyudrr('')">
                     各地区情况
                 </div>
 
@@ -25,12 +26,12 @@
                     <img src="@/assets/img/jain.png" class="cz addinconhhddf" v-else>
                 </div>
                 <ul class="cen ls fz14 kkjkjdsftyye" v-if="ishjhhd">
-                    <li @click="fgdfyudrr">总体排名</li>
-                    <li @click="fgdfyudrr">服务放肆完备度</li>
-                    <li @click="fgdfyudrr">服务事项覆盖度</li>
-                    <li @click="fgdfyudrr">办事指南准确度</li>
-                    <li @click="fgdfyudrr">在线办理成熟度</li>
-                    <li @click="fgdfyudrr">在线服务成效度</li>
+                    <li @click="fgdfyudrr('ztpm')">总体排名</li>
+                    <li @click="fgdfyudrr('fwfswbd')">服务方式完备度</li>
+                    <li @click="fgdfyudrr('')">服务事项覆盖度</li>
+                    <li @click="fgdfyudrr('')">办事指南准确度</li>
+                    <li @click="fgdfyudrr('')">在线办理成熟度</li>
+                    <li @click="fgdfyudrr('')">在线服务成效度</li>
                 </ul>
 
                 <div class="fz14  yj4 nbl jhhdfsdtyd mt15" @click="dfgdyysb">
@@ -54,7 +55,8 @@
             return {
                 ishjhhd: false,
                 ishjhhdb: false,
-                yidongf: false
+                yidongf: false,
+                title: ''
             }
         },
         components: {
@@ -78,13 +80,20 @@
             dfrty(e) {
                 this.yidongf = true
             },
-            fgdfyudrr() {
+            fgdfyudrr(url) {
+                this.title = this.$route.meta.title
                 this.yidongf = false
+                this.hf(url)
             }
         },
         mounted() {
-
+            this.title = this.$route.meta.title
             mock.init()
+        },
+        watch: {
+            $route(to, from) {
+                this.title = this.$route.meta.title
+            }
         },
     }
 
@@ -119,10 +128,12 @@
         z-index: 100;
         background: rgba(6, 99, 153, 0.8);
         padding: 36px 20px;
+        opacity: 0
     }
 
     .meulistdf.act {
-        left: -40px
+        left: -40px;
+        opacity: 1
     }
 
     .jhhdfsdtyd {
@@ -165,6 +176,9 @@
         bottom: -3px;
         border-radius: 50%
     }
-  
+
+    .kkjkjdsftyye li {
+        cursor: pointer
+    }
 
 </style>

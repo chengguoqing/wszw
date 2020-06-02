@@ -7,7 +7,7 @@
 <script>
     import tubiao from "@/components/tubiao"
     export default {
-        props: ['id'],
+        props: ['id', "ytter","datsse"],
         data() {
             return {
                 ssddf: false,
@@ -68,13 +68,32 @@
                 })
                 this.shuju.series = dfgdfy
                 this.shuju.legend.data = jjsde
-                
+
                 this.ssddf = true
                 this.$refs.ddrrtty.setdsds(this.shuju)
             }
         },
         mounted() {
-            this.jjhsdd(this.id)
+            if (this.ytter) {
+                let res = this.datsse
+                res = res.data
+                this.shuju.xAxis.data = res.cityList
+                let dfgdfy = res.series
+                let jjsde = []
+                dfgdfy.map(a => {
+                    a.type = 'line'
+                    a.smooth = true
+                    jjsde.push(a.name)
+
+                })
+                this.shuju.series = dfgdfy
+                this.shuju.legend.data = jjsde
+
+                this.ssddf = true
+            } else {
+
+                this.jjhsdd(this.id)
+            }
         },
     }
 

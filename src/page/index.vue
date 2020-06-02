@@ -16,7 +16,6 @@
 
                     <div class="jjhbnnxert mt10">
                         <el-table :data="tableData" style="width: 100%" highlight-current-row>
-
                             <el-table-column prop="" label="总体排名">
                                 <template slot-scope="scope">
                                     <span class="fz14">
@@ -124,9 +123,9 @@
 
                             </div>
                             <div class="pd">
-                                <p class="cf jjhhdf fz14">企业使命用户<span class="ls">3548万</span> 
+                                <p class="cf jjhhdf fz14">企业实名用户<span class="ls">{{zjdff.ztgsg}}</span> 
                                     <span class="ml20">
-                                    个人实名用户 <span class="ls">1.45亿</span>
+                                    个人实名用户 <span class="ls">{{zjdff.ztgsh}}</span>
                                     </span>
                                 </p>
                             </div>

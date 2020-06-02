@@ -1,5 +1,6 @@
 body {
     background: url(../img/bgtu.png) 100% 100%;
+    padding-bottom: 40px;
 }
 
 .kkjjnnxrt {
@@ -95,6 +96,10 @@ body {
 .jjhbnnxert .el-table thead .cell{
      color: #2FFFFF !important;
     text-align: center;
+    font-size: 12px
+}
+.jjhbnnxert .el-table .cell{
+     font-size: 12px
 }
 
 .el-table--enable-row-hover .el-table__body tr:hover>td,.el-table__body tr.current-row>td {
@@ -206,3 +211,23 @@ body {
     position: relative;
     top: 4px;
 }
+
+.dfsgdyryued table{
+    width: 100% !important
+}
+.dfsgdyryued.ba .el-table .cell{
+    height: 20px !important
+}
+.dfsgdyryued.ba .el-table tr:nth-child(2n){
+    background: #04245A !important
+}
+.jjhbnnxert .el-table__body-wrapper.is-scrolling-left{
+    overflow: hidden
+}
+.jjhbnnxert .el-table::before{
+    display: none
+}
+
+
+
+

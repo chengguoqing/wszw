@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from './page/index.vue'
 import zidongpeng from './page/zidongpeng.vue'
-
+import fwfswbd from './page/ztfx/fwfswbd.vue'
+import ztpm from './page/ztfx/ztpm.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +25,26 @@ export default new Router({
             meta: {
                 requireAuth: true,
                 title: '自动喷淋系统'
+            }
+
+        },
+        {
+            path: '/fwfswbd',
+            name: 'fwfswbd',
+            component: fwfswbd,
+            meta: {
+                requireAuth: true,
+                title: '服务方式完备度'
+            }
+
+        },
+        {
+            path: '/ztpm',
+            name: 'ztpm',
+            component: ztpm,
+            meta: {
+                requireAuth: true,
+                title: '总体排名'
             }
 
         }

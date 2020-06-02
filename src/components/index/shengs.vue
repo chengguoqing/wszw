@@ -6,12 +6,13 @@
 <script>
     import tubiao from "@/components/tubiao"
     export default {
-        props: ['data'],
+        props: ['data','show'],
         data() {
             return {
                 shuju: {
                     visualMap: {
                         left: 'right',
+                        show: !this.show , 
                         textStyle: { //设置字体颜色
                             color: '#fff'
                         },
