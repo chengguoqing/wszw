@@ -5,7 +5,7 @@
             <div class="pd kjhnmcrert row ">
                 <div class="col">
                     <span class="jhnxder yj"></span>
-                    <span class="ls fz16">总体排名</span>
+                    <span class="ls fz16">{{title}}排名</span>
                 </div>
             </div>
             <div class="jjhbnnxert mt10">
@@ -77,7 +77,7 @@
 </template>
 <script>
     export default {
-        props: ['tableData', 'tableDatb'],
+        props: ['tableData', 'tableDatb','title'],
         data() {
             return {
                 caidan: [{

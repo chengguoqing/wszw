@@ -64,7 +64,7 @@
                             <span class="ls fz16">数据分析</span>
                         </div>
  <div>
-                                <span class="ls dsftyxrt ml10" :class="sd.cls" v-for="sd in shujusd" @click="jjndrrtter(sd)">
+                                <span class="ls dsftyxrt ml10" :class="sd.cls" v-for="sd in shujusd" >
                                    <i class="iconfont cz" :class="[sd.icon,sd.size]"></i> {{sd.name}}
                                 </span>
                             </div>

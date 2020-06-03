@@ -18,6 +18,12 @@
                             color: '#fff'
                         }
                     },
+                    grid: {
+                        left: '0%',
+                        right: '0%',
+                        bottom: '10%',
+                        containLabel: true
+                    },
                     tooltip: {},
                     textStyle: { //设置字体颜色
                         color: '#fff'
@@ -33,6 +39,7 @@
                         }
                     },
                     yAxis: {
+
                         axisLine: { //最外面的边框颜色
                             lineStyle: {
                                 color: "#4F5564"
@@ -42,8 +49,6 @@
                             show: false
                         }
                     },
-                    // Declare several bar series, each will be mapped
-                    // to a column of dataset.source by default.
                     series: [{
                             type: 'bar',
                             label: {
@@ -119,11 +124,21 @@
                 this.shuju.series = hhgder
             }
             if (this.ty == 3) {
-                this.dataset.qgpj.map(a=>{
+                this.dataset.qgpj.map(a => {
                     hhgder.push(a)
                 })
                 this.shuju.series = hhgder
                 this.shuju.legend.bottom = -10
+            }
+            if (this.ty == 4) {
+                this.shuju.color= ["#E7495A", "#F5B324", "#7ED321","#4C90E2"]
+                hhgder.map(a=>{
+                    delete  a["label"]
+                })
+                hhgder.push({
+                    type: 'bar'
+                })
+                this.shuju.series = hhgder
             }
             this.ssddf = true
         },

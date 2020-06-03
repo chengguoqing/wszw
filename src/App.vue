@@ -28,7 +28,7 @@
                 <ul class="cen ls fz14 kkjkjdsftyye" v-if="ishjhhd">
                     <li @click="fgdfyudrr('ztpm')">总体排名</li>
                     <li @click="fgdfyudrr('fwfswbd')">服务方式完备度</li>
-                    <li @click="fgdfyudrr('')">服务事项覆盖度</li>
+                    <li @click="fgdfyudrr('fwsxfgd')">服务事项覆盖度</li>
                     <li @click="fgdfyudrr('')">办事指南准确度</li>
                     <li @click="fgdfyudrr('')">在线办理成熟度</li>
                     <li @click="fgdfyudrr('')">在线服务成效度</li>

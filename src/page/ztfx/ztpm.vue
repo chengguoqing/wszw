@@ -3,7 +3,7 @@
     <div class="row">
        
  <div class="jhgsdleft">
-     <left :tableData="tableData" :tableDatb="tableDatb"></left>
+     <left :tableData="tableData" :tableDatb="tableDatb" title="总体"></left>
     </div>
         <div class="ml20 col">
             <div class="row">

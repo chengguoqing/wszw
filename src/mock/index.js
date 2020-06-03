@@ -490,13 +490,13 @@ export default {
                             },
                             {
                                 product: '华中',
-                                 '2018年地区平均值': '@integer(1, 100)',
+                                '2018年地区平均值': '@integer(1, 100)',
                                 '2017年地区平均值': '@integer(1, 100)',
                                 '2016年地区平均值': '@integer(1, 100)'
                             },
                             {
                                 product: '华南',
-                                 '2018年地区平均值': '@integer(1, 100)',
+                                '2018年地区平均值': '@integer(1, 100)',
                                 '2017年地区平均值': '@integer(1, 100)',
                                 '2016年地区平均值': '@integer(1, 100)'
                             },
@@ -508,7 +508,7 @@ export default {
                             },
                             {
                                 product: '西北',
-                                 '2018年地区平均值': '@integer(1, 100)',
+                                '2018年地区平均值': '@integer(1, 100)',
                                 '2017年地区平均值': '@integer(1, 100)',
                                 '2016年地区平均值': '@integer(1, 100)'
                             }
@@ -517,11 +517,11 @@ export default {
                             {
                                 name: '2018年全国平均值',
                                 type: 'line'
-                            },{
+                            }, {
                                 name: '2017年全国平均值',
                                 type: 'line',
                                 'data|4': ['@integer(1, 100)']
-                            },{
+                            }, {
                                 name: '2016年全国平均值',
                                 type: 'line',
                                 'data|4': ['@integer(1, 100)']
@@ -531,6 +531,159 @@ export default {
                 }
             })
 
+        })
+
+
+
+
+        /**
+         * @api {get} api/getfwsxfgd 服务事项覆盖度-办事指南发布数量
+         * @apiName 服务事项覆盖度-办事指南发布数量
+         * @apiGroup index
+         * @apiParam {Number} type  1'行政权力事项',2 '依申请事项',3 '依职权事项', 4'公共服务事项'
+         * @apiSuccess {Nubmer} code  状态码
+         * @apiSuccess {String} msg  备注
+         * @apiSuccess {Array} data  数据
+         * @apiSuccess {Object} data.bszlfbsl  数据
+         * @apiSuccess {Object} data.bszlfbsl.name 城市名
+         * @apiSuccess {Object} data.bszlfbsl.value 值
+         */
+        Mock.mock(url_eer + 'getfwsxfgd', function (options) {
+            return Mock.mock({
+                code: 0,
+                msg: '成功',
+                'data': [
+                    {
+                        name: '大同',
+                        value: '@integer(1000, 10000)'
+                    },
+                    {
+                        name: '朔州',
+                        value: '@integer(1000, 10000)'
+                        },
+                    {
+                        name: '忻州',
+                        value: '@integer(1000, 10000)'
+                            },
+                    {
+                        name: '太原',
+                        value: '@integer(1000, 10000)'
+                            },
+                    {
+                        name: '吕梁',
+                        value: '@integer(1000, 10000)'
+                            },
+                    {
+                        name: '阳泉',
+                        value: '@integer(1000, 10000)'
+                            },
+                    {
+                        name: '晋中',
+                        value: '@integer(1000, 10000)'
+                            },
+                    {
+                        name: '临汾',
+                        value: '@integer(1000, 10000)'
+                            },
+                    {
+                        name: '长治',
+                        value: '@integer(1000, 10000)'
+                            },
+                    {
+                        name: '晋城',
+                        value: '@integer(1000, 10000)'
+                            },
+                    {
+                        name: '运城',
+                        value: '@integer(1000, 10000)'
+                        }
+                    ]
+
+
+
+            })
+        })
+
+
+        /**
+         * @api {get} api/getfwsxfgdindex 服务事项覆盖度
+         * @apiName 服务事项覆盖度-办事指南发布数量
+         * @apiGroup getfwsxfgdindex
+         * @apiParam {Number} type  1'行政权力事项',2 '依申请事项',3 '依职权事项', 4'公共服务事项'
+         * @apiSuccess {Nubmer} code  状态码
+         * @apiSuccess {String} msg  备注
+         * @apiSuccess {Object} data  数据
+         * @apiSuccess {Object} data.hjgdffa  历年行政权力累事项指南发布数量对比
+         * @apiSuccess {Object} data.hjgdffb  市级政府相关清单发布情况
+         */
+        Mock.mock(url_eer + 'getfwsxfgdindex', function (options) {
+            return Mock.mock({
+                code: 0,
+                msg: '成功',
+                'data': {
+                    hjgdffa: {
+                        dimensions: ['product', '2018', '2017', '2016', '2015'],
+                        source: [{
+                                product: '总数量',
+                                '2018': '@integer(10000, 100000)',
+                                '2017': '@integer(10000, 100000)',
+                                '2016': '@integer(10000, 100000)',
+                                '2015': '@integer(10000, 100000)'
+                            },
+                            {
+                                product: '平均数量',
+                                '2018': '@integer(10000, 100000)',
+                                '2017': '@integer(10000, 100000)',
+                                '2016': '@integer(10000, 100000)',
+                                '2015': '@integer(10000, 100000)'
+                            }
+                        ]
+                    },
+                    hjgdffb: {
+                        'jhggda|3': ['@integer(1, 40)'],
+                        'jhggdb|3': ['@integer(1, 100)']
+                    }
+                }
+
+
+            })
+        })
+
+
+
+        /**
+         * @api {get} api/getzhpm 综合排名
+         * @apiName 综合排名
+         * @apiGroup getfwsxfgdindex
+         * @apiSuccess {Nubmer} code  状态码
+         * @apiSuccess {String} msg  备注
+         * @apiSuccess {Object} data  数据
+           * @apiSuccess {Nubmer} data.type  1上 2平 3下
+         */
+        Mock.mock(url_eer + 'getzhpm', function (options) {
+            return Mock.mock({
+                code: 0,
+                msg: '成功',
+                'data|14': [
+                    {
+                        type:"@integer(1, 3)",
+                        jhhsdsda: "@cword(2)",
+                        jhhsdsdb: "@integer(1, 100)",
+                        jhhsdsdc: "@integer(1, 100)",
+                        jhhsdsdd: "@integer(1, 100)",
+                        jhhsdsde: "@integer(1, 100)",
+                        jhhsdsdf: "@integer(1, 100)",
+                        jhhsdsdg: "@integer(1, 100)",
+                        jhhsdsdh: "@integer(1, 100)",
+                        jhhsdsdi: "@integer(1, 100)",
+                        jhhsdsdj: "@integer(1, 100)",
+                        jhhsdsdk: "@integer(1, 100)",
+                        jhhsdsdq: "@integer(1, 100)"
+                    }
+                ]
+
+
+            })
         })
 
 

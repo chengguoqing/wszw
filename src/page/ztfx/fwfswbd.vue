@@ -2,11 +2,10 @@
 <template>
     <div class="row">
         <div class="jhgsdleft">
-            <left :tableData="tableData" :tableDatb="tableDatb"></left>
+            <left :tableData="tableData" :tableDatb="tableDatb" title="服务方式完备度"></left>
 
         </div>
-       
-<div class="ml20 col">
+        <div class="ml20 col">
             <div class="row">
                 <div class="dfdrtyset nbl pr ac">
                     <div class="pd kjhnmcrert row ab">
@@ -165,18 +164,18 @@
                         <span class="ls fz14">政务服务界面统一入口</span>
                     </div>
                 </div>
-                    <el-row class="dfdstyryuus" v-if="isxsdb">
-                        <el-col :span="12" class=" h100">
+                <el-row class="dfdstyryuus" v-if="isxsdb">
+                    <el-col :span="12" class=" h100">
                         <zwfwjmturk :data="hjgdffb"></zwfwjmturk>
-                        </el-col>
-                        <el-col :span="12" class=" h100">
-                        <zwfwjmturk  :data="hjgdffc"></zwfwjmturk>
-                        </el-col>
-                    </el-row>
-                
+                    </el-col>
+                    <el-col :span="12" class=" h100">
+                        <zwfwjmturk :data="hjgdffc"></zwfwjmturk>
+                    </el-col>
+                </el-row>
+
             </div>
 
-             <div class="jjddrttyw nbl pr ac ov bc mt15">
+            <div class="jjddrttyw nbl pr ac ov bc mt15">
                 <div class="pd kjhnmcrert row ab">
                     <div class="col">
                         <span class="jhnxder yj"></span>
@@ -193,7 +192,7 @@
     </div>
 </template>
 <script>
-     import left from "@/components/ztfx/left"
+    import left from "@/components/ztfx/left"
     import shengs from "@/components/index/shengs"
     import sjzfwszwfwnl from "@/components/ztfx/sjzfwszwfwnl"
     import zwfwjmturk from "@/components/ztfx/zwfwjmturk"
@@ -205,7 +204,7 @@
                 jindus: "",
                 res: '',
                 isxsd: false,
-                isxsdb:false,
+                isxsdb: false,
                 caidan: [{
                     name: "总体排名",
                     url: ""
@@ -243,7 +242,7 @@
                 this.datasetb = res.data.hjgdffe
                 this.hjgdffb = res.data.hjgdffb
                 this.hjgdffc = res.data.hjgdffc
-                 this.isxsdb = true
+                this.isxsdb = true
             },
             async getsjzwfwpt() {
                 let res = await this.get('getsjzwfwpt', {})
@@ -260,8 +259,7 @@
 
 </script>
 <style scoped>
-   
- .jhgsdleft {
+    .jhgsdleft {
         width: 392px
     }
 
@@ -354,24 +352,26 @@
         border-radius: 0;
         height: 266px !important
     }
-      .jjddrttyw.bc {
+
+    .jjddrttyw.bc {
         height: 304px !important;
-          border-radius: 0;
-          border-bottom-right-radius: 40px
+        border-radius: 0;
+        border-bottom-right-radius: 40px
     }
 
     .mjnjdfdtyser {
         height: 250px;
         padding: 0px 20px
     }
-    .dfdstyryuus{
+
+    .dfdstyryuus {
         height: 230px;
         position: relative;
         top: -20px
     }
-    .dfrtyxert.nm{
-        border-radius: 0 
-    }
 
+    .dfrtyxert.nm {
+        border-radius: 0
+    }
 
 </style>

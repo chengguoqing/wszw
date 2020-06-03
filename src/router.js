@@ -4,27 +4,21 @@ import index from './page/index.vue'
 import zidongpeng from './page/zidongpeng.vue'
 import fwfswbd from './page/ztfx/fwfswbd.vue'
 import ztpm from './page/ztfx/ztpm.vue'
+import fwsxfgd from './page/ztfx/fwsxfgd.vue'
+import csny from './page/ztfx/csny.vue'
+import zhpm from './page/ztfx/zhpm.vue'
+import test from './page/test.vue'
 Vue.use(Router)
 
 export default new Router({
     routes: [
         {
-            path: '/',
-            name: '',
+            path: '/index',
+            name: 'index',
             component: index,
             meta: {
                 requireAuth: true,
                 title: '首页'
-            }
-
-        },
-        {
-            path: '/zidongpeng',
-            name: '',
-            component: zidongpeng,
-            meta: {
-                requireAuth: true,
-                title: '自动喷淋系统'
             }
 
         },
@@ -47,7 +41,49 @@ export default new Router({
                 title: '总体排名'
             }
 
+        },
+        {
+            path: '/fwsxfgd',
+            name: 'fwsxfgd',
+            component: fwsxfgd,
+            meta: {
+                requireAuth: true,
+                title: '服务事项覆盖度'
+            }
+
+        },
+        {
+            path: '/csny',
+            name: 'csny',
+            component: csny,
+            meta: {
+                requireAuth: true,
+                title: '太原市'
+            }
+
+        },
+        {
+            path: '/zhpm',
+            name: 'zhpm',
+            component: zhpm,
+            meta: {
+                requireAuth: true,
+                title: '2018综合排名'
+            }
+
+        },
+        {
+            path: '/',
+            name: 'test',
+            component: test,
+            meta: {
+                requireAuth: test,
+                title: ''
+            }
+
         }
+
+
 
     ]
 })
