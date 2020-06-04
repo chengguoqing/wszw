@@ -9,10 +9,10 @@
 <script>
     import tubiao from "@/components/tubiao"
     export default {
-        props: ['dataset'],
+        props: ['dataset', 'zohjhbdf', 'baioti'],
         data() {
             return {
-                ddjjjerr:false,
+                ddjjjerr: false,
                 shuju: {
                     tooltip: {},
                     textStyle: { //设置字体颜色
@@ -74,8 +74,18 @@
 
         },
         mounted() {
+            if (this.zohjhbdf) {
+                this.shuju.xAxis[0].data = this.zohjhbdf
+            }
+            if (this.baioti) {
+                this.shuju.legend.data = this.baioti
+                this.shuju.series[0].name = this.baioti[0]
+                this.shuju.series[1].name = this.baioti[1]
+            }
+
+
             this.shuju.series[0].data = this.dataset.jhggda
-             this.shuju.series[1].data = this.dataset.jhggdb
+            this.shuju.series[1].data = this.dataset.jhggdb
             this.ddjjjerr = true
         },
     }

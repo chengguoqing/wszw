@@ -642,7 +642,59 @@ export default {
                     hjgdffb: {
                         'jhggda|3': ['@integer(1, 40)'],
                         'jhggdb|3': ['@integer(1, 100)']
-                    }
+                    },
+                    hjgdffc: {
+                        'jhggda|5': ['@integer(1, 40)'],
+                        'jhggdb|5': ['@integer(1, 100)']
+                    },
+                    hjgdffd: [
+                        {
+                            name: '大同',
+                            value: '@integer(1000, 10000)'
+                    },
+                        {
+                            name: '朔州',
+                            value: '@integer(1000, 10000)'
+                        },
+                        {
+                            name: '忻州',
+                            value: '@integer(1000, 10000)'
+                            },
+                        {
+                            name: '太原',
+                            value: '@integer(1000, 10000)'
+                            },
+                        {
+                            name: '吕梁',
+                            value: '@integer(1000, 10000)'
+                            },
+                        {
+                            name: '阳泉',
+                            value: '@integer(1000, 10000)'
+                            },
+                        {
+                            name: '晋中',
+                            value: '@integer(1000, 10000)'
+                            },
+                        {
+                            name: '临汾',
+                            value: '@integer(1000, 10000)'
+                            },
+                        {
+                            name: '长治',
+                            value: '@integer(1000, 10000)'
+                            },
+                        {
+                            name: '晋城',
+                            value: '@integer(1000, 10000)'
+                            },
+                        {
+                            name: '运城',
+                            value: '@integer(1000, 10000)'
+                        }
+                    ]
+
+
                 }
 
 
@@ -654,11 +706,11 @@ export default {
         /**
          * @api {get} api/getzhpm 综合排名
          * @apiName 综合排名
-         * @apiGroup getfwsxfgdindex
+         * @apiGroup getzhpm
          * @apiSuccess {Nubmer} code  状态码
          * @apiSuccess {String} msg  备注
          * @apiSuccess {Object} data  数据
-           * @apiSuccess {Nubmer} data.type  1上 2平 3下
+         * @apiSuccess {Nubmer} data.type  1上 2平 3下
          */
         Mock.mock(url_eer + 'getzhpm', function (options) {
             return Mock.mock({
@@ -666,7 +718,7 @@ export default {
                 msg: '成功',
                 'data|14': [
                     {
-                        type:"@integer(1, 3)",
+                        type: "@integer(1, 3)",
                         jhhsdsda: "@cword(2)",
                         jhhsdsdb: "@integer(1, 100)",
                         jhhsdsdc: "@integer(1, 100)",

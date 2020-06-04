@@ -7,6 +7,8 @@ import ztpm from './page/ztfx/ztpm.vue'
 import fwsxfgd from './page/ztfx/fwsxfgd.vue'
 import csny from './page/ztfx/csny.vue'
 import zhpm from './page/ztfx/zhpm.vue'
+import bsznzqd from './page/ztfx/bsznzqd.vue'
+import zxfwcxd from './page/ztfx/zxfwcxd.vue'
 import test from './page/test.vue'
 Vue.use(Router)
 
@@ -81,7 +83,27 @@ export default new Router({
                 title: ''
             }
 
-        }
+        },
+        {
+            path: '/bsznzqd',
+            name: 'bsznzqd',
+            component: bsznzqd,
+            meta: {
+                requireAuth: true,
+                title: '办事指南准确度'
+            }
+
+        },
+        {
+            path: '/zxfwcxd',
+            name: 'zxfwcxd',
+            component: zxfwcxd,
+            meta: {
+                requireAuth: true,
+                title: '在线服务成效度'
+            }
+
+        },
 
 
 
